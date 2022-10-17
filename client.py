@@ -154,9 +154,9 @@ def menu_screen():
     while run:
         clock.tick(60)
         #win.fill((0,0,0))
-        font = pygame.font.SysFont("comicsans", 60)
+        font = pygame.font.SysFont("comicsans", 70)
         font1 = pygame.font.SysFont("monospace", 40, bold = True)
-        text1 = font1.render("ROCK PAPER SCISORS", 1, (0,0,0))
+        text1 = font1.render("ROCK PAPER SCISORS", 1, (0,0,255))
         text = font.render("Click to Play!", 1, (255,0,0))
         win.blit(bg, (0,0))
         win.blit(text, (180,450))
