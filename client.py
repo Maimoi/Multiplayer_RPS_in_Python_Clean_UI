@@ -48,14 +48,14 @@ def redrawWindow(win, game, p):
     if not(game.connected()):
         font = pygame.font.SysFont("comicsans", 80)
         text = font.render("Waiting for Player...", 1, (255,0,0), True)
-        win.blit(text, (width/2 - text.get_width()/2, height/2 - text.get_height()/2))
+        win.blit(text, (width/2 - text.get_width()/3, height/2 - text.get_height()/3))
     else:
         font = pygame.font.SysFont("comicsans", 60)
         text = font.render("Your Move", 1, (0, 255,255))
         win.blit(text, (80, 150))
 
         text = font.render("Opponents", 1, (0, 255, 255))
-        win.blit(text, (380, 150))
+        win.blit(text, (300, 150))
 
         move1 = game.get_player_move(0)
         move2 = game.get_player_move(1)
@@ -78,11 +78,11 @@ def redrawWindow(win, game, p):
                 text2 = font.render("Waiting...", 1, (255, 0, 0))
 
         if p == 1:
-            win.blit(text2, (100, 300))
-            win.blit(text1, (400, 300))
+            win.blit(text2, (100, 200))
+            win.blit(text1, (300, 300))
         else:
-            win.blit(text1, (100,300))
-            win.blit(text2, (400, 300))
+            win.blit(text1, (100,200))
+            win.blit(text2, (300, 300))
 
         for btn in btns:
             btn.draw(win)
